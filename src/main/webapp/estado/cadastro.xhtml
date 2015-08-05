@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet library="css" name="sistema.css" />
+	<h:outputStylesheet library="css" name="cadastro.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+	<title>- Lista de Estados -</title>
+
+</h:head>
+<h:body styleClass="container">
+	<h1 class="cabecalho">Cadastro de Estados</h1>
+	<h:messages showDetail="false" showSummary="true"
+			styleClass="form-messages" errorClass="error" infoClass="info" />
+	<h:form id="frm">
+		<h:button value="Listar" outcome="index" styleClass="btn-consulta" />
+		<h:panelGrid columns="2" styleClass="form-grid" columnClasses="label, campo" style="tabela">
+			<h:outputLabel value="Sigla"/>
+			<h:inputText size="15" maxlength="2" value="#{cadastroEstadoBean.estado.sigla}" label="Sigla" required="true">
+			<f:validateLength minimum="2"/>
+			</h:inputText>
+			
+			<h:outputLabel value="Nome"/>
+			<h:inputText size="35" maxlength="100" value="#{cadastroEstadoBean.estado.nomeCompleto}" label="Nome" required="true">
+			<f:validateLength minimum="4"/>
+			</h:inputText>
+			<h:outputLabel/>
+			<h:commandButton value="Cadastrar" action="#{cadastroEstadoBean.cadastrar}" styleClass="btn-novo"/>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

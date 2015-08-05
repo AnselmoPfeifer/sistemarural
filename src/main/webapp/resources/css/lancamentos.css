@@ -1,0 +1,33 @@
+td.colunmA { 
+	width: 10%;
+	text-align: center;
+}
+
+td.colunmB {
+	width: 15%px;
+	text-align: center;
+}
+
+td.colunmC {
+	width: 60%;
+	text-align: center;
+}
+
+td.colunmD {
+	width: 15%;
+	text-align: center;
+}
+
+.btn {
+	padding: 5px;
+	font-size: 14px;
+	color:#FFFFFF;
+	background-color: #666666;
+	border-color: #E6E2E2;
+	border-radius: 7px;
+	padding: 3px;
+}
+.previous{
+	color: #666666;
+}
+
